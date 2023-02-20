@@ -10,7 +10,7 @@
   
   .container {
       text-align: center;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-family: 'Cairo';
       color: grey;
       font-size: 20px;
     }
@@ -26,32 +26,33 @@
     color: red;
    }
   
-   h1::before {  
-    transform: scaleX(0);
-    transform-origin: bottom right;
-  }
-  
-  h1:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-  
-  h1::before {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    inset: 0 0 0 0;
-    background: hsl(200 100% 80%);
-    z-index: -1;
-    transition: transform .3s ease;
-  }
-  
   h1 {
     position: relative;
     font-size: 5rem;
   }
+
+  h1{
+    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: 50px;
+    margin: 10px 0;
+  }
   
+  h3{
+    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 50px;
+    margin: 10px 0;
+  }
+
+
   html {
     block-size: 100%;
     inline-size: 100%;
@@ -73,9 +74,49 @@
     }
   }
   
-   
-  
-  
-  
-  
-   
+  /****beating heart****/
+.wrap img {
+  max-width:50px;
+  margin:20px auto;
+  -webkit-animation-name: pulse; 
+  -webkit-animation-duration: 1.1s; 
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1.0);
+    opacity: 0.95;
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+    opacity: 1.0;
+  }
+  to { 
+    -webkit-transform: scale(1.0);
+    opacity: 0.95;
+  }
+}
+ /****beating heart****/
+
+ .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
